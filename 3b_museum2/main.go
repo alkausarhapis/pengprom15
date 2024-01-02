@@ -5,26 +5,22 @@ import (
 )
 
 func main() {
-	var totalPengunjung, pengunjung int
+	var i, totalPengunjung, pengunjung, hari int
+	var stop bool
 
-	// Menerima input jumlah pengunjung selama 5 hari
-	for i := 1; i <= 5; i++ {
+	hari = 5
 
-		// Menerima input pengunjung pada hari ke-i
-		for {
+	for i = 1; i <= hari; i++ {
+		stop = false
+		for !stop {
 			fmt.Printf("Hari %d: ", i)
 			fmt.Scan(&pengunjung)
 
-			// Periksa apakah input valid
-			if pengunjung >= 0 && pengunjung <= 200 {
-				break
-			}
+			stop = pengunjung >= 0 && pengunjung <= 200
 		}
 
-		// Tambahkan jumlah pengunjung ke total
 		totalPengunjung += pengunjung
 	}
 
-	// Tampilkan jumlah total pengunjung selama 5 hari
-	fmt.Printf("Jumlah pengunjung : %d", totalPengunjung)
+	fmt.Println("Jumlah pengunjung :", totalPengunjung, "orang")
 }

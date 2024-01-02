@@ -1,0 +1,17 @@
+program faktor_persekutuan
+kamus
+    m, n, min, i : integer
+algoritma
+    input(m, n)
+
+    min <- n
+    if m < n then
+        min <- m
+    endif
+
+    for i <- 1 to min do
+        if n mod i == 0 AND m mod i == 0 then
+            output(i)
+        endif
+    endfor
+endprogram

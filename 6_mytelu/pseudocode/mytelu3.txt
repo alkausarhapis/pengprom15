@@ -1,0 +1,28 @@
+program mytelu2
+kamus
+    i, poin, user, silverUser, platinumUser, goldUser : int
+algoritma
+    silverUser <- 0
+    platinumUser <- 0
+    goldUser <- 0 
+
+    input(user)
+
+    for i <- 0 to user do
+        repeat
+            input(poin)
+        until poin >= 50
+
+        if poin >= 50 AND poin <= 99 then
+            silverUser <- silverUser + 1
+        else if poin >= 100 AND poin <= 200 then
+            platinumUser <- platinumUser + 1
+        else
+            goldUser <- goldUser + 1
+        endif
+    endfor
+
+    output("Silver user = ", silverUser)
+    output("Platinum user = ", platinumUser)
+    output("Gold user = ", goldUser)
+endprogram

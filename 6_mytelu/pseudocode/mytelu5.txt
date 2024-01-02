@@ -1,0 +1,43 @@
+program mytelu2
+kamus
+    poin, silverUser, platinumUser, goldUser, totalSilver, totalGold, totalPlatinum : int
+    averageSilver, averagePlatinum, averageGold : real
+algoritma
+    silverUser <- 0
+    platinumUser <- 0
+    goldUser <- 0 
+    totalPoin <- 0
+
+    while totalPoin < 500 do
+        repeat
+            input(poin)
+            totalPoin <- totalPoin + poin
+        until poin >= 50
+
+        if poin >= 50 AND poin <= 99 then
+            totalSilver <- totalSilver + poin
+            silverUser <- silverUser + 1
+        else if poin >= 100 AND poin <= 200 then
+            totalPlatinum <- totalPlatinum + poin
+            platinumUser <- platinumUser + 1
+        else
+            totalGold <- totalGold + poin
+            goldUser <- goldUser + 1
+        endif
+    endwhile
+
+    if silverUser > 0 then 
+        averageSilver <- totalSilver div silverUser
+    endif
+
+    if platinumUser > 0 then
+        averagePlatinum <- totalPlatinum div platinumUser
+    endif
+
+    if goldUser > 0 then
+        averageGold <- averageGold div goldUser
+
+    output("Silver user = ", averageSilver)
+    output("Platinum user = ", averagePlatinum)
+    output("Gold user = ", averageGold)
+endprogram

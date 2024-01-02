@@ -4,14 +4,15 @@ import "fmt"
 
 func main() {
 	var poin int
+	var stop bool
 
-	for {
+	stop = false
+
+	for !stop {
 		fmt.Print("Masukkan Poin : ")
 		fmt.Scan(&poin)
 
-		if poin >= 50 {
-			break
-		}
+		stop = poin >= 50
 	}
 
 	if poin >= 50 && poin <= 99 {

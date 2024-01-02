@@ -27,8 +27,8 @@ func main() {
 	}
 
 	if aCount != 5 || bCount != 5 {
-		fmt.Println("Keluaran tidak valid")
+		fmt.Println("tidak valid")
 	} else {
-		fmt.Println("Keluaran", winner)
+		fmt.Println("Pemenang : ", winner)
 	}
 }

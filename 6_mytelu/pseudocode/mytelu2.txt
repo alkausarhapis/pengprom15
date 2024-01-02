@@ -1,0 +1,16 @@
+program mytelu2
+kamus
+    poin : int
+algoritma
+    repeat
+        input(poin)
+    until poin >= 50
+
+    if poin >= 50 AND poin <= 99 then
+        output("Silver user")
+    else if poin >= 100 AND poin <= 200 then
+        output("Platinum user")
+    else
+        output("Gold user")
+    endif
+endprogram

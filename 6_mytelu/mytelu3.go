@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var poin, user, silverUser, platinumUser, goldUser int
+	var i, poin, user, silverUser, platinumUser, goldUser int
+	var stop bool
 
 	silverUser = 0
 	platinumUser = 0
@@ -12,14 +13,13 @@ func main() {
 	fmt.Print("Masukkan jumlah user : ")
 	fmt.Scan(&user)
 
-	for i := 0; i < user; i++ {
-		for {
+	for i = 0; i < user; i++ {
+		stop = false
+		for !stop {
 			fmt.Printf("Masukkan Poin user %d: ", i+1)
 			fmt.Scan(&poin)
 
-			if poin >= 50 {
-				break
-			}
+			stop = poin >= 50
 		}
 
 		if poin >= 50 && poin <= 99 {

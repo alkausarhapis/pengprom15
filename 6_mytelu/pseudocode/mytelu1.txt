@@ -1,0 +1,18 @@
+program mytelu1
+kamus
+    poin : int
+algoritma
+    input(poin)
+
+    if poin < 50 then
+        poin <- poin + 50
+    endif
+
+    if poin >= 50 AND poin <= 99 then
+        output("Silver user")
+    else if poin >= 100 AND poin <= 200 then
+        output("Platinum user")
+    else
+        output("Gold user")
+    endif
+endprogram

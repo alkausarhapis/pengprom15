@@ -1,0 +1,28 @@
+program museum1
+kamus
+    currentVisitors, prevVisitors, totalVisitor, increase, increaseDays, days : integer
+    averageIncrease : real
+algoritma
+    input(prevVisitors)
+
+    repeat
+        totalVisitor <- totalVisitor + prevVisitors
+        days <- days + 1
+
+        input(currentVisitors)
+
+        increase <- currentVisitors - prevVisitors
+
+        if increase > 0 AND currentVisitors <= 200 then
+            increaseDays <- increaseDays + 1
+        endif
+
+        prevVisitors <- currentVisitors
+    until prevVisitors >= 0 AND prevVisitors <= 200
+
+    if increaseDays > 0 then 
+        averageIncrease = totalVisitor / days
+    endif
+
+    output(increaseDays, averageIncrease)
+endprogram

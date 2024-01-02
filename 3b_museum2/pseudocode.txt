@@ -1,0 +1,17 @@
+program museum2
+kamus
+    i, totalPengunjung, pengunjung, hari : integer
+algoritma
+    hari <- 5
+
+    for i <- 1 to hari do
+        repeat
+            output("Hari", i, ":")
+            input(pengunjung)
+        until pengunjung >= 0 AND pengunjung <= 200
+
+    totalPengunjung <- totalPengunjung + pengunjung
+    endfor
+
+    output("Jumlah pengunjung :", totalPengunjung, "orang")
+endprogram

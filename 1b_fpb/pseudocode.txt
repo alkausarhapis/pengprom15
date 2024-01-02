@@ -1,0 +1,13 @@
+program fpb
+kamus
+    m, n : integer
+algoritma
+    input(m, n)
+
+    while m != 0 do
+        n <- m 
+        m <- n mod m
+    endwhile
+
+    output(n)
+endprogram

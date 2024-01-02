@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	var poin, totalPoin, silverUser, platinumUser, goldUser, totalSilver, totalGold, totalPlatinum int
 	var averageSilver, averagePlatinum, averageGold float32
+	var stop bool
 
 	silverUser = 0
 	platinumUser = 0
@@ -14,15 +15,16 @@ func main() {
 	totalPoin = 0
 
 	for totalPoin < 500 {
-		for {
+		stop = false
+		for !stop {
 			fmt.Printf("Masukkan Poin user %d : ", i)
 			fmt.Scan(&poin)
 			totalPoin += poin
 
 			if poin >= 50 {
 				i++
-				break
 			}
+			stop = poin >= 50
 		}
 
 		if poin >= 50 && poin <= 99 {

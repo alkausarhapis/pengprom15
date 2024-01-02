@@ -1,0 +1,19 @@
+program kpk
+kamus
+    m, n, max, kpk : integer
+algoritma
+    input(m, n)
+
+    max <- n
+    if m > n then
+        max <- m
+    endif
+
+    kpk <- max
+
+    while kpk mod n != 0 OR kpk mod m != 0 do
+        kpk <- kpk + max
+    endwhile
+
+    output(kpk)
+endprogram

@@ -1,0 +1,27 @@
+program balap_mobil_mini
+kamus 
+    car, winner : string
+    i, aCount, bCount : integer
+algoritma
+    for i <- 1 to 10 do
+        input(car)
+
+        if car == "A" then 
+            aCount <- aCount + 1
+        else if car == "B" then
+            bCount <- bCount + 1
+        endif
+
+        if aCount == 4 AND winner == "" then
+            winner <- "A"
+        else if bCount == 4 AND winner == "" then
+            winner <- "B"
+        endif
+    endfor
+
+    if aCount != 5 OR bCount != 5 then
+        output("Tidak valid")
+    else 
+        output("Pemenang : ", winner)
+    endif
+endprogram
