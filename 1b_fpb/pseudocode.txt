@@ -5,8 +5,9 @@ algoritma
     input(m, n)
 
     while m != 0 do
-        n <- m 
+        temp <- m
         m <- n mod m
+        n <- m 
     endwhile
 
     output(n)

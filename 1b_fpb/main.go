@@ -8,7 +8,9 @@ func main() {
 	fmt.Scan(&m, &n)
 
 	for m != 0 {
-		n, m = m, n%m
+		temp := m
+		m = n % m
+		n = temp
 	}
 
 	fmt.Print(n)

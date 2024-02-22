@@ -32,6 +32,6 @@ func main() {
 		averageIncrease = float64(totalVisitor) / float64(days)
 	}
 
-	fmt.Printf("Jumlah hari naik: %d\n", increaseDays)
-	fmt.Printf("Rata-rata kenaikan pengunjung per hari: %.2f\n", averageIncrease)
+	fmt.Println("Jumlah hari naik: ", increaseDays)
+	fmt.Printf("Rata-rata kenaikan pengunjung per hari: %.2f", averageIncrease)
 }
